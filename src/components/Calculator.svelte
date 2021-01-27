@@ -23,7 +23,7 @@
     class="input"
     bind:value={$url}
     placeholder="Post or Comment URL" />
-<button on:click={calculate($url)} disabled={!$url}>
+<button on:click={calculate($url)} disabled={!$url || $loading}>
     {#if $loading}Loading...{:else}Calculate{/if}
 </button>
 
